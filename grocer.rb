@@ -49,7 +49,7 @@ def apply_coupons(cart, coupons)
       if coupons[i][:item] == cart[ii][:item] and coupons[i][:num] <= cart[ii][:count]
         cart << {item: "#{cart[ii][:item]} W/COUPON", price: coupons[i][:cost]/coupons[i][:num], clearance: cart[ii][:clearance], count: cart[ii][:count]-cart[ii][:count].modulo(coupons[i][:num])}
         cart[ii][:count] -= cart.last[:count]
-      else
+      
       
       end
       ii += 1
