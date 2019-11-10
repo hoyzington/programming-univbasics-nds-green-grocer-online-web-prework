@@ -77,7 +77,7 @@ def checkout(cart, coupons)
   total = 0
   i = 0
   while i < cart.size
-    total += cart[i][:price]*
+    total += cart[i][:price]*cart[i][:price]
       cart[i][:price] *= 0.8
       cart[i][:price].round(2)
     end
