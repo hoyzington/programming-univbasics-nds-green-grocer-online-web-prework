@@ -60,7 +60,13 @@ end
 
 
 def apply_clearance(cart)
-  
+  i = 0
+  while i < cart.size
+    if cart[i][:clearance] == true
+      cart[i][:]
+    end
+    i += 1
+  end
   
   
   # REMEMBER: This method **should** update cart
