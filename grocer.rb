@@ -44,7 +44,23 @@ end
 def apply_coupons(cart, coupons)
   
   
-  
+  i = 0
+  while i < coupons.size
+    new_cart[i][:count] = 0
+    i += 1
+  end
+  i = 0
+  while i < new_cart.size
+    ii = 0
+    while ii < cart.size
+      if new_cart[i][:item] == cart[ii][:item]
+        new_cart[i][:count] += 1
+      end
+      ii += 1
+    end  
+    i += 1
+  end
+  new_cart
   # REMEMBER: This method **should** update cart
   
 end
